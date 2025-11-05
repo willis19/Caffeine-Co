@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffeine Co.</title>
+    <title>Caffeine Co. | Home</title>
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Caffeine Co.</h1>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Reviews</a></li>
+    <header class="app-header">
+        <nav class="app-navbar">
+            <div class="app-logo">
+                <h1>Caffeine Co.</h1>
+            </div>
+            <div class="app-hamburger" onclick="appHamburger(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <ul class="app-links">
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">Reviews</a>
+                </li>
             </ul>
         </nav>
     </header>
+    <script src="/js/script.js"></script>
 </body>
 </html>

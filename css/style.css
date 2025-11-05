@@ -1,6 +1,102 @@
-/* font-family: "Montserrat", sans-serif; */
-
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.app-header {
+    width: 100%;
+    height: 80px;
+    background-color: #242423;
+}
+
+.app-navbar {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-logo h1 {
+    color: #BF59FF;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.app-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.app-links li a {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.app-links li a:hover {
+    color: #BF59FF;
+}
+
+.app-hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #BF59FF;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburgerToggle .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.hamburgerToggle .bar2 {
+    opacity: 0;
+}
+
+.hamburgerToggle .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .app-hamburger {
+        display: block;
+    }
+
+    .app-links {
+        flex-direction: column;
+        background-color: #242423;
+        position: absolute;
+        top: 90px;
+        right: 10px;
+        width: 150px;
+        border-radius: 10px;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .app-links.active {
+        opacity: 1;
+        max-height: 300px;
+        padding: 10px 0;
+    }
+
+    .app-links a {
+        display: block;
+        padding: 10px;
+        text-align: right;
+    }
 }
